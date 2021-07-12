@@ -29,6 +29,12 @@
         "title": "Featured products"
       }
     },
+    "featured_products_two": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products"
+      }
+    },
     "image_text": {
       "type": "image-with-text",
       "blocks": {
@@ -42,16 +48,8 @@
           "type": "button"
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
+      "block_order": ["heading", "text", "button"]
     }
   },
-  "order": [
-    "image_banner",
-    "featured_products",
-    "image_text"
-  ]
+  "order": ["image_banner", "featured_products", "image_text"]
 }
