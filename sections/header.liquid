@@ -14,11 +14,11 @@
     margin-left: -1.2rem;
   }
 
-  @media screen and (min-width: 990px) {
+  {% comment %} @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
     }
-  }
+  } {% endcomment %}
 
   .menu-drawer-container {
     display: flex;
@@ -184,7 +184,7 @@
     {%- endif -%}
 
     <span class="h1" style="
-        color: red;
+        justify-content: center;
       ">True Victory</span>
     <div class="header__icons">
       <details-modal class="header__search">
