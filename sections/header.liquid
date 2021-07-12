@@ -10,8 +10,8 @@
 
 <style>
   header-drawer {
-    justify-self: end;
-    margin-right: 10.2rem;
+    justify-self: start;
+    margin-left: -1.2rem;
   }
 
   @media screen and (min-width: 990px) {
@@ -116,17 +116,7 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-              src="{{ section.settings.logo | img_url: image_size }}"
-              loading="lazy"
-              class="header__heading-logo"
-              width="{{ section.settings.logo.width }}"
-              height="{{ section.settings.logo.height }}"
-              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-            >
-        </a>
+        
         <span class="h2">True Victory</span>
     {%- if request.page_type == 'index' -%}
       </h1>
@@ -220,6 +210,17 @@
         {%- endif -%}
       </a>
     </div>
+    <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+      <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+        src="{{ section.settings.logo | img_url: image_size }}"
+        loading="lazy"
+        class="header__heading-logo"
+        width="{{ section.settings.logo.width }}"
+        height="{{ section.settings.logo.height }}"
+        alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+      >
+    </a>
     {%- if section.settings.menu != blank -%}
       <header-drawer>
         <details class="menu-drawer-container">
