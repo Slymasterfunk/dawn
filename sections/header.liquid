@@ -210,7 +210,9 @@
         {%- endif -%}
       </a>
     </div>
-    <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+
+    {% comment %} Logo {% endcomment %}
+    {% comment %} <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
       {%- assign image_size = section.settings.logo_width | append: 'x' -%}
       <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
         src="{{ section.settings.logo | img_url: image_size }}"
@@ -220,7 +222,7 @@
         height="{{ section.settings.logo.height }}"
         alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
       >
-    </a>
+    </a> {% endcomment %}
     {%- if section.settings.menu != blank -%}
       <header-drawer>
         <details class="menu-drawer-container">
